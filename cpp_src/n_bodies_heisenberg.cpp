@@ -3,16 +3,16 @@
 #define BODY_N 2
 #define STATE_N 4
 
-int nthSpinZ(int state, int n){
+int nthSigma(int state, int n){
   return state >> n & 1;
 }
 
 bool nthSpinIsAbleToApplyUp(int state, int n){
-  return nthSpinZ(state, n) == 0;
+  return nthSigma(state, n) == 0;
 }
 
 bool nthSpinIsAbleToApplyDown(int state, int n){
-  return nthSpinZ(state, n) == 1;
+  return nthSigma(state, n) == 1;
 }
 
 int nthSpinUpOperator(int state, int n){
@@ -37,7 +37,7 @@ int main(){
     for(int n = 0; n < BODY_N - 1; ++n){
       int state;
 
-      if(nthSpinZ(i, n + 1) == nthSpinZ(i, n)){
+      if(nthSigma(i, n + 1) == nthSigma(i, n)){
         hamiltonian[i][i] += 0.25;
       }else{
         hamiltonian[i][i] -= 0.25;

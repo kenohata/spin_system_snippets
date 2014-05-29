@@ -1,16 +1,16 @@
 #include <iostream>
 #include <bitset>
 
-int nthSpinZ(int state, int n){
+int nthSigma(int state, int n){
   return state >> n & 1;
 }
 
 bool nthSpinIsAbleToApplyUp(int state, int n){
-  return nthSpinZ(state, n) == 0;
+  return nthSigma(state, n) == 0;
 }
 
 bool nthSpinIsAbleToApplyDown(int state, int n){
-  return nthSpinZ(state, n) == 1;
+  return nthSigma(state, n) == 1;
 }
 
 int nthSpinUpOperator(int state, int n){
