@@ -1,7 +1,7 @@
 #include <iostream>
 
-int getNthBit(int i, int n){
-  return i >> n & 0b1;
+int nthSigma(int i, int n){
+  return i >> n & 1;
 }
 
 int main(){
@@ -14,7 +14,7 @@ int main(){
   int f = 0b0110;
   int g = 0b0111;
 
-  std::cout << getNthBit(a, 2) << std::endl;
+  std::cout << nthSigma(a, 2) << std::endl;
 
   return 0;
 }

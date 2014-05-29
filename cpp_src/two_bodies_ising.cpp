@@ -1,12 +1,12 @@
 #include <iostream>
 #include <bitset>
 
-int nthSpinZ(int vector, int n){
+int nthSigma(int vector, int n){
   return vector >> n & 1;
 }
 
 int productOfIthAndJthSigma(int vector, int i, int j){
-  if(nthSpinZ(vector, i) == nthSpinZ(vector, j)){
+  if(nthSigma(vector, i) == nthSigma(vector, j)){
     return 1;
   }else{
     return -1;
