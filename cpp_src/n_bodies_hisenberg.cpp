@@ -24,11 +24,11 @@ int nthSpinDownOperator(int state, int n){
 }
 
 int main(){
-  int hamiltonian[STATE_N][STATE_N];
+  float hamiltonian[STATE_N][STATE_N];
 
   for(int i = 0; i < STATE_N; ++i){
     for(int j = 0; j < STATE_N; ++j){
-      hamiltonian[i][j] = 0;
+      hamiltonian[i][j] = 0.0;
     }
   }
 
@@ -38,21 +38,21 @@ int main(){
       int state;
 
       if(nthSpinZ(i, n + 1) == nthSpinZ(i, n)){
-        hamiltonian[i][i] += 1;
+        hamiltonian[i][i] += 0.25;
       }else{
-        hamiltonian[i][i] -= 1;
+        hamiltonian[i][i] -= 0.25;
       }
 
       if(nthSpinIsAbleToApplyUp(i, n + 1) && nthSpinIsAbleToApplyDown(i, n)){
         state = nthSpinUpOperator(i, n + 1);
         state = nthSpinDownOperator(state, n);
 
-        hamiltonian[i][state] -= 2;
+        hamiltonian[i][state] -= 0.5;
       }else if(nthSpinIsAbleToApplyDown(i, n + 1) && nthSpinIsAbleToApplyUp(i, n)){
         state = nthSpinDownOperator(i, n + 1);
         state = nthSpinUpOperator(state, n);
 
-        hamiltonian[i][state] -= 2;
+        hamiltonian[i][state] -= 0.5;
       }
     }
   }
