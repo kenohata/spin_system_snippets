@@ -25,14 +25,14 @@
 
 順番にやってね
 
-1. int_prefix.cpp
-2. bit_operation.cpp
-3. get_nth_bit.cpp
-4. two_bodies_ising.cpp
-5. matrix.cpp
-6. n_bodies_ising.cpp
-7. spin_operators.cpp
-8. n_bodies_heisenberg.cpp
+1. int_prefix
+2. bit_operation
+3. get_nth_bit
+4. two_bodies_ising
+5. matrix
+6. n_bodies_ising
+7. spin_operators
+8. n_bodies_heisenberg
 
 # Author
 
