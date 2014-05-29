@@ -1,7 +1,7 @@
 #include <iostream>
 
-int nthSigma(int i, int n){
-  return i >> n & 1;
+int nthSigma(int state, int n){
+  return state >> n & 1;
 }
 
 int main(){

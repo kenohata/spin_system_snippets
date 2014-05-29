@@ -3,24 +3,24 @@
 #define BODY_N 2
 #define STATE_N 4
 
-int nthSpinZ(int vector, int n){
-  return vector >> n & 1;
+int nthSpinZ(int state, int n){
+  return state >> n & 1;
 }
 
-bool nthSpinIsAbleToApplyUp(int vector, int n){
-  return nthSpinZ(vector, n) == 0;
+bool nthSpinIsAbleToApplyUp(int state, int n){
+  return nthSpinZ(state, n) == 0;
 }
 
-bool nthSpinIsAbleToApplyDown(int vector, int n){
-  return nthSpinZ(vector, n) == 1;
+bool nthSpinIsAbleToApplyDown(int state, int n){
+  return nthSpinZ(state, n) == 1;
 }
 
-int nthSpinUpOperator(int vector, int n){
-  return vector + (1 << n);
+int nthSpinUpOperator(int state, int n){
+  return state + (1 << n);
 }
 
-int nthSpinDownOperator(int vector, int n){
-  return vector - (1 << n);
+int nthSpinDownOperator(int state, int n){
+  return state - (1 << n);
 }
 
 int main(){

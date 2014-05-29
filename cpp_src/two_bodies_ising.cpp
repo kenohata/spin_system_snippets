@@ -1,12 +1,12 @@
 #include <iostream>
 #include <bitset>
 
-int nthSigma(int vector, int n){
-  return vector >> n & 1;
+int nthSigma(int state, int n){
+  return state >> n & 1;
 }
 
-int productOfIthAndJthSigma(int vector, int i, int j){
-  if(nthSigma(vector, i) == nthSigma(vector, j)){
+int productOfIthAndJthSigma(int state, int i, int j){
+  if(nthSigma(state, i) == nthSigma(state, j)){
     return 1;
   }else{
     return -1;
