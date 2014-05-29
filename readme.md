@@ -27,7 +27,7 @@
 
 1. int_prefix
 2. bit_operation
-3. get_nth_bit
+3. nth_sigma
 4. two_bodies_ising
 5. matrix
 6. n_bodies_ising
